@@ -1,0 +1,2 @@
+# MDIST
+Distância de Manhattan
