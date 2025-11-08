@@ -7,7 +7,8 @@ use ieee.numeric_std.all;
 entity IC is
 				
 	Port (
-				entrada: std_logic_vector (1 downto 0); 
+				X,Y: std_logic_vector (99 downto 0); 
+				Dif: std_logic_vector (1 downto 0); 
 				Z : out std_logic_vector (6 downto 0));			
 				
 				
@@ -15,13 +16,10 @@ end IC;
 
 	architecture componente of IC is
 	
-type vetor2bits is array (99 downto 0) of std_logic_vector(1 downto 0);
 
-signal SubOut: vetor2bits;
-signal Dif: vetor2bits;
-signal X : vetor2bits;
-signal Y : vetor2bits;
---signal soma : vetor2bits;
+signal SubOut: std_logic_vector(1 downto 0);
+
+
 
 
 begin
@@ -33,10 +31,10 @@ process (X, Y)
 	
 	begin
 
-	for i in 0 to 98 loop
+	for i in 0 to 99 loop
 	
 		
-		SubOut(i) <= std_logic_vector(unsigned(X(i)) - unsigned(Y(i)));
+		SubOut(i) <= ('0'&X(i)) - ('0'&Y(i));
 		
 	end loop;
 
@@ -49,8 +47,12 @@ process(Dif)
 	variable i : integer := 0;
 	
 	begin
+	
+	for i in 0 to 99 loop
 
 	Dif(i) <= SubOut(i);
+	
+	end loop;
 	
 end process;
 
@@ -62,6 +64,7 @@ end process;
 --begin
 
     -- cálculo combinacional
+	 
     --soma <= (others => '0'); -- inicializa
 	 
     --process(SubOut)
