@@ -22,8 +22,8 @@ end MDIST_IC;
 	architecture componente of MDIST_IC is
 	
 
-signal SubOut : std_logic_vector(99 downto 0)(1 downto 0);
-signal z : std_logic_vector(39 downto 0);
+signal SubOut : std_logic_vector(1 downto 0);
+
 
 
 
@@ -46,27 +46,6 @@ begin
 	
 end process; 
 
-	process
-	
-    variable temp_z : std_logic_vector(39 downto 0);
-begin
-
-    temp_z := (others => '0');
-	 
-    for i in 0 to 4 loop
-	 
-        temp_z((i+1)*8-1 downto i*8) := "000" & SubOut(i);  -- concatena bits
-		  
-    end loop;
-	 
-    z <= temp_z;
-	 
-end process;
 
 end componente;
 
---Esse código só mostra mensagens na simulação.
-	--Ele não é sintetizável — ou seja, não vai funcionar em hardware real.
-
-   --O VHDL não tem controle de formato de saída como print() em Python,
-	--então cada report gera uma nova linha automaticamente.
