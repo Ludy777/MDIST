@@ -177,6 +177,6 @@ end process;
      ("00000"&abs(SubOut80)) + ("00000"&abs(SubOut81)) + ("00000"&abs(SubOut82)) + ("00000"&abs(SubOut83)) + ("00000"&abs(SubOut84)) +
      ("00000"&abs(SubOut85)) + ("00000"&abs(SubOut86)) + ("00000"&abs(SubOut87)) + ("00000"&abs(SubOut88)) + ("00000"&abs(SubOut89)) +
      ("00000"&abs(SubOut90)) + ("00000"&abs(SubOut91)) + ("00000"&abs(SubOut92)) + ("00000"&abs(SubOut93)) + ("00000"&abs(SubOut94)) +
-     ("00000"&abs(SubOut95)) + ("00000"&abs(SubOut96)) + ("00000"&abs(SubOut97)) + ("00000"&abs(SubOut98)) +  ("00000"&abs(SubOut98));
+     ("00000"&abs(SubOut95)) + ("00000"&abs(SubOut96)) + ("00000"&abs(SubOut97)) + ("00000"&abs(SubOut98)) +  ("00000"&abs(SubOut99));
 
 end componente;
